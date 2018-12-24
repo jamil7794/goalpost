@@ -13,7 +13,7 @@
         <!--GoalsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GoalsVC" customModule="goalpost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalsVC" id="BYZ-38-t0r" customClass="GoalsVC" customModule="goalpost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
         <!--Create GoalVC-->
         <scene sceneID="m3N-cV-1aW">
             <objects>
-                <viewController id="3C7-78-OZs" customClass="CreateGoalVC" customModule="goalpost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createGoalVC" id="3C7-78-OZs" customClass="CreateGoalVC" customModule="goalpost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="POT-eB-JmB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
