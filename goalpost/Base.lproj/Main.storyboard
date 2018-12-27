@@ -74,7 +74,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nco-8R-3Dk">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="70" id="DZn-6K-vst" customClass="GoalCell" customModule="goalpost" customModuleProvider="target">
@@ -138,18 +138,39 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-uw-sOQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSu-ok-aZO">
+                                                            <rect key="frame" x="73" y="14.5" width="229.5" height="41"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.68611011876158734" blue="0.38298313770096815" alpha="0.76212007705479456" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tSu-ok-aZO" firstAttribute="centerY" secondItem="9qB-uw-sOQ" secondAttribute="centerY" id="5Ln-W5-dK2"/>
+                                                        <constraint firstItem="tSu-ok-aZO" firstAttribute="centerX" secondItem="9qB-uw-sOQ" secondAttribute="centerX" id="koB-Dg-FRn"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="9qB-uw-sOQ" firstAttribute="leading" secondItem="qMH-Xs-wm7" secondAttribute="leading" id="7ke-NT-FfN"/>
                                                 <constraint firstItem="DJv-ty-xNz" firstAttribute="top" secondItem="qMH-Xs-wm7" secondAttribute="topMargin" constant="2" id="EQq-T0-7eY"/>
+                                                <constraint firstItem="9qB-uw-sOQ" firstAttribute="top" secondItem="qMH-Xs-wm7" secondAttribute="top" id="Exd-h2-R1C"/>
+                                                <constraint firstAttribute="bottom" secondItem="9qB-uw-sOQ" secondAttribute="bottom" id="TY2-9L-XLb"/>
                                                 <constraint firstItem="DJv-ty-xNz" firstAttribute="leading" secondItem="qMH-Xs-wm7" secondAttribute="leadingMargin" constant="10" id="dVs-Mi-bfU"/>
                                                 <constraint firstItem="MTC-zt-WF1" firstAttribute="leading" secondItem="DJv-ty-xNz" secondAttribute="trailing" constant="18" id="ix1-2P-JkQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="MTC-zt-WF1" secondAttribute="trailing" constant="8" id="l1e-wz-YdK"/>
                                                 <constraint firstAttribute="bottom" secondItem="MTC-zt-WF1" secondAttribute="bottom" constant="8" id="wCM-EB-fhU"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="DJv-ty-xNz" secondAttribute="bottom" constant="1" id="yWz-yw-xB2"/>
                                                 <constraint firstItem="MTC-zt-WF1" firstAttribute="top" secondItem="qMH-Xs-wm7" secondAttribute="top" constant="8" id="ze2-bj-AUI"/>
+                                                <constraint firstAttribute="trailing" secondItem="9qB-uw-sOQ" secondAttribute="trailing" id="ztW-HD-pLy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completionView" destination="9qB-uw-sOQ" id="irC-iM-yd0"/>
                                             <outlet property="goalDescriptionLbl" destination="1CO-XJ-5Tq" id="ds4-dl-zN8"/>
                                             <outlet property="goalProgressLbl" destination="MTC-zt-WF1" id="C2N-1C-53S"/>
                                             <outlet property="goalTypeLbl" destination="wPK-m7-OdB" id="aah-da-EUZ"/>
@@ -157,17 +178,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-Ai-i8X">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StL-r5-6vf">
+                                        <rect key="frame" x="162" y="-3.5" width="51" height="37"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8T-wI-Oqo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.86666666670000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="StL-r5-6vf" firstAttribute="centerY" secondItem="e9S-Ai-i8X" secondAttribute="centerY" id="HXa-oh-NO0"/>
+                                    <constraint firstItem="StL-r5-6vf" firstAttribute="centerX" secondItem="e9S-Ai-i8X" secondAttribute="centerX" id="foN-oF-eXI"/>
+                                    <constraint firstAttribute="height" constant="30" id="kxF-8u-mzM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nco-8R-3Dk" firstAttribute="top" secondItem="ZMI-7c-UaU" secondAttribute="bottom" id="3PP-6v-aQr"/>
+                            <constraint firstItem="e9S-Ai-i8X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="85y-cZ-yuw"/>
                             <constraint firstItem="ZMI-7c-UaU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gdj-1L-T2f"/>
                             <constraint firstItem="fNP-WQ-eTh" firstAttribute="top" secondItem="ZMI-7c-UaU" secondAttribute="bottom" constant="75" id="Igs-29-SGu"/>
                             <constraint firstItem="ZMI-7c-UaU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LhQ-BZ-IrX"/>
+                            <constraint firstItem="e9S-Ai-i8X" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NFg-dU-PiT"/>
                             <constraint firstItem="fNP-WQ-eTh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCh-le-5zu"/>
                             <constraint firstItem="ZMI-7c-UaU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Y3f-o2-r85"/>
+                            <constraint firstItem="e9S-Ai-i8X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fxK-ub-SCQ"/>
                             <constraint firstItem="Nco-8R-3Dk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m3S-au-jSe"/>
-                            <constraint firstItem="Nco-8R-3Dk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rSw-7g-OEl"/>
+                            <constraint firstItem="e9S-Ai-i8X" firstAttribute="top" secondItem="Nco-8R-3Dk" secondAttribute="bottom" id="tIP-vD-fP1"/>
                             <constraint firstItem="Nco-8R-3Dk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zfl-Vc-MjO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
